@@ -1,52 +1,64 @@
-'use client'
-import Link from 'next/link'
-import React from 'react'
-
+"use client";
+import Link from "next/link";
+import React from "react";
+import styles from "./navbar.module.css";
 const links = [
-    {
-      id: 1,
-      title: "Home",
-      url: "/",
-    },
-    {
-      id: 2,
-      title: "Portfolio",
-      url: "/portfolio",
-    },
-    {
-      id: 3,
-      title: "Blog",
-      url: "/blog",
-    },
-    {
-      id: 4,
-      title: "About",
-      url: "/about",
-    },
-    {
-      id: 5,
-      title: "Contact",
-      url: "/contact",
-    },
-    {
-      id: 6,
-      title: "Dashboard",
-      url: "/dashboard",
-    },
-  ];
+  {
+    id: 1,
+    title: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
+    title: "Portfolio",
+    url: "/portfolio",
+  },
+  {
+    id: 3,
+    title: "Blog",
+    url: "/blog",
+  },
+  {
+    id: 4,
+    title: "About",
+    url: "/about",
+  },
+  {
+    id: 5,
+    title: "Contact",
+    url: "/contact",
+  },
+  {
+    id: 6,
+    title: "Dashboard",
+    url: "/dashboard",
+  },
+];
 
 const Navbar = () => {
   return (
-    <div>
-        Navbar-
-     <Link href='/'>Digital Marketing Homepage</Link>
-     <div>
-    {links.map(link=>
-        <Link key={link.id} href={link.url}>{link.title}</Link>
-    )}</div>  
-    <button onClick={()=>{console.log('logged out!')}}>Log out</button>
-    </div>
-  )
-}
+    <div className={styles.container}>
+      <Link href="/" className={styles.logo}>
+        Digital Marketing
+      </Link>
+      <div className={styles.links}>
+        {links.map((link) => (
+          <Link key={link.id} href={link.url} className={styles.link}>
+            {link.title}
+          </Link>
+        ))}
 
-export default Navbar
+        <button
+          className={styles.logout}
+          onClick={() => {
+            console.log("logged out!");
+          }}
+        >
+          Logout
+        </button>
+      </div>{" "}
+    </div>
+  );
+};
+
+export default Navbar;
