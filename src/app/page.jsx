@@ -4,16 +4,20 @@ import Hero from "/public/hero.png";
 
 export default function Home() {
   return (
-    <div>
-      <Image src={Hero} alt="Hero" />
-      {/* <div>
-        <Image
-          width={500}
-          height={500}
-          src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt="External Image"
-        />
-      </div> */}
+    <div className={styles.container}>
+      <div className={styles.item}>
+        <h1 className={styles.title}>
+          Better design for your digital products.
+        </h1>
+        <p className={styles.desc}>
+          Turning your Idea into Reality.We bring together the teams from the
+          global tech industry.
+        </p>
+        <button className={styles.button}>See our works</button>
+      </div>
+      <div className={styles.item}>
+        <Image src={Hero} alt="Hero" className={styles.img} />
+      </div>
     </div>
   );
 }
