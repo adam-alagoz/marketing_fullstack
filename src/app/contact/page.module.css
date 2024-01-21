@@ -1,53 +1,40 @@
 .container {
-}
-
-.title {
-  font-size: 60px;
-  margin-bottom: 100px;
-  text-align: center;
-}
-
-.content {
   display: flex;
   align-items: center;
   gap: 100px;
 }
 
-.imgContainer {
+.item {
   flex: 1;
-  height: 500px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
-.image {
+.title {
+  font-size: 72px;
+  background: linear-gradient(to bottom, #194c33, #bbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.img {
+  width: 100%;
+  height: 500px;
   object-fit: contain;
   animation: move 3s infinite ease alternate;
 }
 
 @keyframes move {
   from {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
   to {
-    transform: translateY(0px) scale(1.03);
+    transform: translateY(10px);
   }
 }
 
-.form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.input,
-.textArea {
-  padding: 20px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #bbb;
-  border: 3px solid #bbb;
-  font-size: 20px;
-  font-weight: bold;
+.desc {
+  font-size: 24px;
+  font-weight: 300;
 }
