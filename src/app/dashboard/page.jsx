@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 const Dashboard = () => {
+  // do with swr
   // const [data, setData] = useState([]);
   // const [error, setError] = useState(false);
   // const [loading, setLoading] = useState(false);
