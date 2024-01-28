@@ -10,7 +10,13 @@ const Dashboard = () => {
   );
   console.log("data", data);
   console.log("err", error);
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      {data?.map((item) => (
+        <p key={item.id}>{item.title}</p>
+      ))}
+    </div>
+  );
 };
 
 export default Dashboard;
