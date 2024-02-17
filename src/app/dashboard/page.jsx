@@ -27,6 +27,7 @@ const Dashboard = () => {
     "https://jsonplaceholder.typicode.com/posts",
     fetcher
   );
+  console.log("useSession()", useSession());
 
   return <div>Dashboard</div>;
 };

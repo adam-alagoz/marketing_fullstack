@@ -1,53 +1,40 @@
 .container {
   display: flex;
-  gap: 100px;
-}
-
-.posts {
-  flex: 1;
-}
-
-.post {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 50px 0px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.imgContainer {
-  width: 200px;
-  height: 100px;
-  position: Ū;
+.title {
+  color: #bbb;
 }
 
-.img {
-  object-fit: cover;
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #bbb;
 }
 
-.delete {
-  cursor: pointer;
-  color: red;
-}
-
-.new {
-  flex: 1;
+.form {
+  width: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.input,
-.textArea {
-  padding: 10px;
+.input {
+  padding: 20px;
   background-color: transparent;
   border: 2px solid #bbb;
-  border-radius: 3px;
+  border-radius: 5px;
+  outline: none;
   color: #bbb;
   font-size: 20px;
   font-weight: bold;
 }
 
 .button {
+  width: 300px;
   padding: 20px;
   cursor: pointer;
   background-color: #53c28b;
@@ -55,4 +42,29 @@
   border-radius: 5px;
   color: #eee;
   font-weight: bold;
+}
+
+.button:hover {
+  background-color: #49b07d;
+}
+
+.or {
+  color: #bbb;
+}
+
+.link {
+  text-decoration: underline;
+  color: #7d7c7c;
+}
+
+.link:hover {
+  color: rgb(61, 61, 61);
+}
+
+.google {
+  background-color: rgba(228, 97, 50, 0.72);
+}
+
+.google:hover {
+  background-color: rgba(228, 97, 50, 0.803);
 }
