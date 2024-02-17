@@ -4,8 +4,7 @@ import styles from "./page.module.css";
 import { signIn } from "next-auth/react";
 
 const Login = () => {
-  // console.log("signin", () => signIn());
-  console.log("googlecle", process.env.GOOGLE_CLIENT_ID);
+  // console.log("signin", signIn());
   return (
     <div className={styles.container}>
       <button
