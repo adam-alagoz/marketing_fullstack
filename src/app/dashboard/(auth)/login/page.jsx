@@ -3,8 +3,19 @@ import React from "react";
 import styles from "./page.module.css";
 import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const session = useSession();
+  const router = useRouter();
+
+  if (session.status === "loading") {
+    return <div>Loading...</div>;
+  }
+  if (session.status === "authenticated") {
+    return router?.push("/dashboard");
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target[0].value;
